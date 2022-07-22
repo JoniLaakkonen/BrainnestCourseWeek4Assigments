@@ -6,19 +6,6 @@
     font-family: 'Prompt', sans-serif;
     text-align: center;
 }
-button {
-    font-weight: 500;
-    font-size: 24px;
-    font-family: monospace;
-    color: rgb(18, 18, 18);
-    border: none;
-    border-radius: 50%;
-    transition: 150ms ease-in-out;
-    cursor: pointer;
-}
-button:hover {
-    background-color: rgb(219, 219, 219);
-}
 main {
     display: flex;
     width: 100%;
@@ -28,54 +15,19 @@ main {
     overflow-x: hidden;
     background: radial-gradient(circle at 100% -40%, #fefaedaa 65%, #12a39aaa 2%, #95afe8aa 100%);
 }
-
-.calculatorCont {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
-    gap: 2px;
-    padding: 10px;
-    background-color: #fff;
-    border: 5px solid rgb(170, 170, 170);
-    border-radius: 40px;
-    overflow: hidden;
-}
-
-.display {
-    grid-column: 1 / -1;
+.container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin: 0 0 10px;
-    padding: 1rem;
-    font-size: 52px;
-    font-weight: 500;
-    border-radius: 30px;
-    background-color: rgb(219, 219, 219);
-    cursor: pointer;
+    flex-flow: column;
 }
-/* TO SEE DISPLAY WHEN screen gets smaller*/
-@media screen and (max-height: 497px) {
-    main {
-        height: 100%;
-    }
+.container a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: #777777;
+    padding: 1rem 2rem;
+    margin: 20px;
+    border-radius: 25px;
 }
-/*Button customizations*/
-#zero {
-    grid-column: span 2;
-    border-radius: 30px;
-}
-.equals {
-    background-color: rgb(120, 168, 228);
-}
-.equals:hover {
-    background-color: rgb(26, 92, 173);
-}
-.backspace {
-    
-}
-#bsIcon {
-    height: 40px;
-    margin: 3px 0 0;
+.container a:hover {
+    background-color: #414040;
 }
