@@ -182,3 +182,11 @@ const addClickedBtn = () => {
   });
 };
 addClickedBtn();
+
+
+//KEYBOARD LISTENER-----------------------------------
+document.addEventListener("keydown", (event) => {
+  const keyPressed = document.querySelector(`button[value="${event.key}"]`);
+  if(!keyPressed) return;//Secure keyPressed for errors coming from inputs that are now valid
+  keyPressed.click();
+});
